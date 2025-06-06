@@ -18,6 +18,7 @@ const Main = () => {
 
             {!showResult && !loading && (
               <>
+              
     <div className="greet">
       <p><span>Hello, Dev.</span></p>
       <p>How can I help you Today?</p>

@@ -10,9 +10,9 @@ export const Context = createContext();
 const ContextProvider = (props) => {
 
     const [input, setInput]= useState("");
-    const [recentprompt, setRecentPrompt]= useState("");
+    const [recentPrompt, setRecentPrompt]= useState("");
     const [prevPrompts,setPrevPrompts]= useState([]);
-    const [showresult, setShowResult]= useState(false);
+    const [showResult, setShowResult]= useState(false);
     const [loading, setLoading]= useState(false);
     const [resultData, setResultData]= useState("");
 
@@ -30,7 +30,6 @@ const ContextProvider = (props) => {
         const response =  await runChat(input);
         setResultData(response);
         setLoading(false);
-        setShowResult(false);
         setInput("");
 
     }
@@ -42,12 +41,13 @@ const ContextProvider = (props) => {
         setPrevPrompts,
         onSent,
         setRecentPrompt,
-        recentprompt,
-        showresult,
+        recentPrompt,
+        showResult,
         loading,
         resultData,
         input,
         setInput,
+    
 
 
 
