@@ -1,7 +1,7 @@
 {
-  "name": "gemini-clone",
+  "name": "gemini-clone-2.0",
   "homepage": "https://jsanjaikumar.github.io/Gemini-Clone-2.0/",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    
     "@google/genai": "^1.2.0",
     "@google/generative-ai": "^0.24.1",
     "dotenv": "^16.5.0",
