@@ -1,15 +1,53 @@
-# React + Vite
+# Gemini Clone – AI Chat App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Gemini Clone**, a modern AI-powered chat application built with **React** and **Vite**. This project demonstrates seamless integration with Google’s Gemini API, showcasing real-time AI conversations and a clean, scalable codebase.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern Stack:** Built with React, Vite, and TypeScript for fast development and optimal performance.
+- **AI Integration:** Leverages Google Gemini’s generative AI for dynamic, context-aware chat responses.
+- **Streaming Responses:** Utilizes async streaming for smooth, real-time message updates.
+- **Clean Architecture:** Modular code with clear separation of concerns and best practices.
+- **Developer Friendly:** Includes ESLint, environment variable support, and easy extensibility.
 
-## Expanding the ESLint configuration
+## 🚀 Quick Start
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+2. **Set up your API key:**
+   - Create a `.env` file in the root directory.
+   - Add your Gemini API key:
+     ```
+     VITE_GEMINI_API_KEY=your-api-key-here
+     ```
+
+3. **Run the app:**
+   ```sh
+   npm run dev
+   ```
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, Vite,
+- **AI API:** @google/genai
+- **Tooling:** ESLint, Prettier
+
+## 📄 Example Usage
+
+```ts
+import runChat from './type';
+
+const response = await runChat("Hello, Gemini!");
+console.log(response);
+```
+
+---
+
+> **Why this project?**  
+> This project demonstrates my ability to build modern, production-ready applications with real-world API integrations, clean code, and a focus on developer experience. I’m excited to bring these skills to your team!
 
 
 type.ts code 
@@ -55,3 +93,4 @@ return resultText;
 }
 
 export default runChat;
+
