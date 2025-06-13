@@ -1,4 +1,4 @@
-# Gemini Clone – AI Chat App
+# Gemini Clone – API Integration
 
 Welcome to **Gemini Clone**, a modern AI-powered chat application built with **React** and **Vite**. This project demonstrates seamless integration with Google’s Gemini API, showcasing real-time AI conversations and a clean, scalable codebase.
 
