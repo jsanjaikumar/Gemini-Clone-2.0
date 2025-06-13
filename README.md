@@ -13,11 +13,13 @@ Welcome to **Gemini Clone**, a modern AI-powered chat application built with **R
 ## 🚀 Quick Start
 
 1. **Install dependencies:**
+
    ```sh
    npm install
    ```
 
 2. **Set up your API key:**
+
    - Create a `.env` file in the root directory.
    - Add your Gemini API key:
      ```
@@ -38,7 +40,7 @@ Welcome to **Gemini Clone**, a modern AI-powered chat application built with **R
 ## 📄 Example Usage
 
 ```ts
-import runChat from './type';
+import runChat from "./type";
 
 const response = await runChat("Hello, Gemini!");
 console.log(response);
@@ -49,48 +51,46 @@ console.log(response);
 > **Why this project?**  
 > This project demonstrates my ability to build modern, production-ready applications with real-world API integrations, clean code, and a focus on developer experience. I’m excited to bring these skills to your team!
 
-
-type.ts code 
+type.ts code
 // To run this code you need to install the following dependencies:
 // npm install @google/genai mime
 // npm install -D @types/node
 
 import {
-  GoogleGenAI,
+GoogleGenAI,
 } from '@google/genai';
 
 async function runChat(prompt: string) {
-  const ai = new GoogleGenAI({
-  apiKey: import.meta.env.VITE_GEMINI_API_KEY,
+const ai = new GoogleGenAI({
+apiKey: import.meta.env.VITE_GEMINI_API_KEY,
 
-  });
-  const config = {
-    responseMimeType: 'text/plain',
-  };
-  const model = 'gemini-2.5-flash-preview-05-20';
-  const contents = [
-    {
-      role: 'user',
-      parts: [
-        {
-          text: prompt,
-        },
-      ],
-    },
-  ];
+});
+const config = {
+responseMimeType: 'text/plain',
+};
+const model = 'gemini-2.5-flash-preview-05-20';
+const contents = [
+{
+role: 'user',
+parts: [
+{
+text: prompt,
+},
+],
+},
+];
 
-  const response = await ai.models.generateContentStream({
-    model,
-    config,
-    contents,
-  });
-  let resultText = "";
+const response = await ai.models.generateContentStream({
+model,
+config,
+contents,
+});
+let resultText = "";
 for await (const chunk of response) {
-  resultText += chunk.text();
+resultText += chunk.text();
 }
 return resultText;
 
 }
 
 export default runChat;
-
